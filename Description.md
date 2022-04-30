@@ -58,4 +58,4 @@
 
 ## Диаграмма таблиц
 
-![Diagramm](images/Diagram.png)
+![Diagramm](Изображения/Diagram.png)
