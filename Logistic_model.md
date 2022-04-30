@@ -68,29 +68,27 @@
 | product_nm      | Название продукта         | text        | not null     |
 | price           | цена продукта             | bigint      | pk, not null |
 | weight          | Название продукта         | text        | not null     |
-| Restaurant_id   | Название ресторана        | text        | not null     |
-| R_id   | Название ресторана        | text        | not null     |
+| Restaurant_id   | Название ресторана        | text        |              |
+| Shop_id         | Название магазина         | text        |              |
 
 ---
 
 ## Favourite_dish_list / Любимое блюдо
 
-| Название        | Описание                          | Тип данных  |  Ограничение |
-| --------------- |:---------------------------------:|:-----------:| ------------ |
-| airport_id      | id аэропорта                      | bigint      | pk, not null |
-| name            | Название аэропорта                | text        | not null     |
-| city_id         | id города в котором этот аэропорт | bigint      | not null     |
+| Название        | Описание               | Тип данных  |  Ограничение |
+| --------------- |:----------------------:|:-----------:| ------------ |
+| Dish_id         | id любимого блюда      | bigint      | pk, not null |
+| Customer_id     | id покупателя          | bigint      | not null     |
 
 ---
 
 ## Operation / Операция
 
-| Название         | Описание                          | Тип данных  |  Ограничение |
-| ---------------- |:---------------------------------:|:-----------:| ------------ |
-| flight_id        | id рейса                          | bigint      | pk, not null |
-| plane_id         | id самолета                       | bigint      | not null     |
-| port_dep_id      | id аэропорта вылета               | bigint      | not null     |
-| port_arr_id      | id aэропорта прибытия             | bigint      | not null     |
-| distance         | Дистанция полета                  | bigint      | not null     |
-| planned_dep_time | Время планируемого вылета         | time        | not null     |
-| planned_arr_time | Время планируемого прилета        | time        | not null     |
+| Название         | Описание                    | Тип данных  |  Ограничение |
+| ---------------- |:---------------------------:|:-----------:| ------------ |
+| Operation_id     | id покупки                  | bigint      | pk, not null |
+| Customer_id      | id покупателя               | bigint      | not null     |
+| Delivery_id      | id сотрудника               | bigint      | pk, not null |
+| Restaurant_id    | id ресторана                | bigint      | pk, not null |
+| Dish_id          | id любимого блюда           | bigint      | pk           |
+| Product_id       | id продукта                 | bigint      | pk           |
